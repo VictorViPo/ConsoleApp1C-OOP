@@ -1,41 +1,26 @@
 ﻿using System;
 
-namespace ConsoleApp1СтарыйЛифт
-
+namespace ConsoleApp2_OOP_C3
 {
-    
     class Program
     {
+        private static string schet1;
+        private static string schet2;
+
         static void Main(string[] args)
         {
-            Console.WriteLine("Лифт\nэто задание займет месяц или больше.");
-            Console.ReadKey();
 
-            //двери
-            //проверка открытых дверей
-            //проверка закрытых дверей
-            //открытие дверей
-            //закрытие дверей
-            //невозможность закрыть дверь (препятствие)
+            while (string.IsNullOrWhiteSpace(schet1))
+            {
+                Console.WriteLine("Введите номер счета с какого перевести средства   ");
+                schet1 = Console.ReadLine();
+            }
 
-            //кнопки
-            //нажата ли кнопка
-            //вызов лифта с этажа
-            //нажатие кнопки в лифте на этаж ( "1" "2" "3" "..." )
-            //спец кнопоки ("стоп" "открыть" "закрыть" "вызов диспечера")
-
-            //движение
-            //вверх до "n" этажа
-            //вниз до "n" этажа
-            //остановка на "n" этаже
-            //невозможность движения при открытых дверях
-
-            //время
-
-            //перегруз кабины
-
-            //свет в кабине
-
+            while (string.IsNullOrWhiteSpace(schet2))
+            {
+                Console.WriteLine("Введите номер счета на какого перевести средства   ");
+                schet2 = Console.ReadLine();
+            }
         }
     }
 }
