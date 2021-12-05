@@ -1,41 +1,105 @@
 ﻿using System;
 
-namespace ConsoleApp1СтарыйЛифт
-
+namespace ConsoleApp2_OOP_C4
 {
-    
     class Program
     {
+        //поля
+        private int BuildingCount;
+        private int StoreysCount;
+        private int apartments;
+        private int entrances;
+
+
         static void Main(string[] args)
         {
-            Console.WriteLine("Лифт\nэто задание займет месяц или больше.");
-            Console.ReadKey();
+            new Building(1);
+            new Storeys(9);
+            new apartments(216);
+            new Entrances(6);
+        }
+        //свойства
+        public int Building //номер здания
+        {
+            get
+            {
+                return BuildingCount;
+            }
+            set
+            {
+                BuildingCount = value;
+            }
+        }
+            public int Storeys //этажи
+        {
+            get
+            {
+                return StoreysCount;
+            }
+            set
+            {
+                StoreysCount = value;
+            }
+        }
+        public int Apartments //количество квартир
+        {
+            get
+            {
+                return apartments;
+            }
+            set
+            {
+                apartments = value;
+            }
+        }
+        public int Entrances // количество подъездов
+        {
+            get
+            {
+                return entrances;
+            }
+            set
+            {
+                entrances = value;
+            }
+        }
 
-            //двери
-            //проверка открытых дверей
-            //проверка закрытых дверей
-            //открытие дверей
-            //закрытие дверей
-            //невозможность закрыть дверь (препятствие)
+        private class Building
+        {
+            private int v;
 
-            //кнопки
-            //нажата ли кнопка
-            //вызов лифта с этажа
-            //нажатие кнопки в лифте на этаж ( "1" "2" "3" "..." )
-            //спец кнопоки ("стоп" "открыть" "закрыть" "вызов диспечера")
+            public Building(int v)
+            {
+                this.v = v;
+            }
+        }
 
-            //движение
-            //вверх до "n" этажа
-            //вниз до "n" этажа
-            //остановка на "n" этаже
-            //невозможность движения при открытых дверях
+        private class Storeys
+        {
+            private int v;
 
-            //время
+            public Storeys(int v)
+            {
+                this.v = v;
+            }
+        }
 
-            //перегруз кабины
+        private class apartments
+        {
+            private int v;
 
-            //свет в кабине
-
+            public apartments(int v)
+            {
+                this.v = v;
+            }
+            //Конструкторы
+            public House(int BuildingCount, int StoreysCount, int apartments, int entrances)
+            {
+                this.BuildingCount = BuildingCount;
+                this.StoreysCount = StoreysCount;
+                this.apartments = apartments;
+                this.entrances = entrances;
+            }
         }
     }
 }
